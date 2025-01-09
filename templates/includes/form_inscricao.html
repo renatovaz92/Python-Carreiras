@@ -1,0 +1,29 @@
+<h4 class="text-center">Formulário de Inscrição</h4>
+<hr>
+<form class="form-group" method="POST" action="/vaga/{{vaga.id}}/inscricao">
+    <div class="mb-2">
+        <label>Nome:</label> <br>
+        <input class="form-control" type="text" name="nome" placeholder="Informe o seu nome">
+    </div>
+    <div class="mb-2">
+        <label>E-mail:</label> <br>
+        <input class="form-control" type="email" name="email" placeholder="Informe o seu e-mail">
+    </div>
+    <div class="mb-2">
+        <label>Endereço:</label> <br>
+        <input class="form-control" type="text" name="endereco" placeholder="Informe o seu endereço">
+    </div>
+    <div class="mb-2">
+        <label>Formação:</label> <br>
+        <input class="form-control" type="text" name="formacao" placeholder="Qual a sua formação?">
+    </div>
+    <div class="mb-2">
+        <label>Experiência:</label> <br>
+        <textarea name="experiencia" rows="7" cols="100" placeholder="Informe sua experiência..."></textarea>
+    </div>
+    <div class="mb-2">
+        <label>LinkedIn:</label> <br>
+        <input class="form-control" type="text" name="linkedin" placeholder="Informe a URL do seu perfil no LinkedIn">
+    </div>
+    <input class="btn btn-success" type="submit" name="Enviar">
+</form>

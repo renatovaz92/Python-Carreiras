@@ -20,6 +20,12 @@ def mostra_vaga(id):
     return "Not Found", 404
   return render_template("detalhevaga.html",vaga=vaga)
 
+@app.route('/vaga/<id>/inscricao',methods=["GET","POST"])
+def inscricao_vaga(id):
+  vaga = carrega_vaga(id)
+  data = request.form
+  return render_template("inscricao_concluida.html",vaga=vaga, inscricao=data)
+
 
 
 
