@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
-from database import carrega_vagas_db,carrega_vaga
+from database import carrega_vagas_db,carrega_vaga, adiciona_inscricao
 
 app = Flask(__name__)
 
@@ -24,6 +24,7 @@ def mostra_vaga(id):
 def inscricao_vaga(id):
   vaga = carrega_vaga(id)
   data = request.form
+  adiciona_inscricao(id, data)
   return render_template("inscricao_concluida.html",vaga=vaga, inscricao=data)
 
 
